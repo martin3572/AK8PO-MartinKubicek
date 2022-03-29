@@ -83,6 +83,7 @@ namespace GetDataFromDatabase
             this.sendReview.Text = "Odoslat";
             this.sendReview.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sendReview.UseVisualStyleBackColor = false;
+            this.sendReview.Click += new System.EventHandler(this.sendReview_Click);
             // 
             // discardReview
             // 

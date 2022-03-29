@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,10 +23,14 @@ namespace GetDataFromDatabase
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-            admin = db.GetAdmin(username.Text, password.Text);
-            if (admin.Any())
-            {
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=AK8PO;Integrated Security=True");
+            conn.Open();
+            SqlCommand cmd1 = new SqlCommand("Select Id from Admin where Username=@Username AND Password=@Password", conn);
+            cmd1.Parameters.AddWithValue("Username", username.Text);
+            cmd1.Parameters.AddWithValue("Password", password.Text);
+            SqlDataReader reader = cmd1.ExecuteReader();
+            if (reader.Read())
+            {               
                 AdminForm adminFormClass = new AdminForm();
                 this.Hide();//because usercontrols have not Close() property as forms
                 this.Parent.Controls.Add(adminFormClass);
@@ -39,8 +44,8 @@ namespace GetDataFromDatabase
                 incorectLogin.Visible = true;
                 username.Clear();
                 password.Clear();
-            }
-
+            }                     
+            conn.Close();
         }
 
         private void discardUsername_Click(object sender, EventArgs e)

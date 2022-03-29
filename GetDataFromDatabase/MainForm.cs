@@ -18,7 +18,7 @@ namespace GetDataFromDatabase
         {
             InitializeComponent();
             reservation1.Hide();
-            menu1.Hide();
+            menu2.Hide();
             loginForm1.Hide();
             adminForm1.Hide();
             reviews1.Hide();
@@ -27,7 +27,7 @@ namespace GetDataFromDatabase
 
         private void order_Click(object sender, EventArgs e)
         {
-                menu1.Show();
+                menu2.Show();
                 reservation1.Hide();
                 loginForm1.Hide();
                 adminForm1.Hide();
@@ -37,7 +37,7 @@ namespace GetDataFromDatabase
         private void reservation_Click(object sender, EventArgs e)
         {
                 reservation1.Show();
-                menu1.Hide();
+                menu2.Hide();
                 loginForm1.Hide();
                 adminForm1.Hide();
                 reviews1.Hide();
@@ -45,8 +45,7 @@ namespace GetDataFromDatabase
 
         private void login_Click(object sender, EventArgs e)
         {
-            LoginForm login = new LoginForm();
-            menu1.Hide();
+            menu2.Hide();
             reservation1.Hide();
             adminForm1.Hide();
             reviews1.Hide();
@@ -56,7 +55,7 @@ namespace GetDataFromDatabase
             {
                 adminForm1.Show();
                 reservation1.Hide();
-                menu1.Hide();
+                menu2.Hide();
                 loginForm1.Hide();
                 reviews1.Hide();
             }
@@ -66,7 +65,7 @@ namespace GetDataFromDatabase
                 loginFormClass.Location = new Point(190, 80);
                 this.Controls.Add(loginFormClass);
                 reservation1.Hide();
-                menu1.Hide();
+                menu2.Hide();
                 adminForm1.Hide();
                 reviews1.Hide();
             }
@@ -77,7 +76,7 @@ namespace GetDataFromDatabase
                 reservation1.Hide();
                 loginForm1.Hide();
                 adminForm1.Hide();
-                menu1.Hide();
+                menu2.Hide();
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -89,6 +88,20 @@ namespace GetDataFromDatabase
         {
             this.WindowState = FormWindowState.Minimized;
         }
-      
+
+        private void addNewItem1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reservation1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menu2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

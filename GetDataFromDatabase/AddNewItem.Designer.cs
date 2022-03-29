@@ -31,64 +31,54 @@ namespace GetDataFromDatabase
         {
             System.Windows.Forms.Label usernameLabel;
             System.Windows.Forms.Label passwordLabel;
-            System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewItem));
+            System.Windows.Forms.Label label2;
             this.label1 = new System.Windows.Forms.Label();
             this.discardProductName = new System.Windows.Forms.Button();
             this.discardPrice = new System.Windows.Forms.Button();
             this.productprice = new System.Windows.Forms.TextBox();
             this.productname = new System.Windows.Forms.TextBox();
             this.addNew = new System.Windows.Forms.Button();
-            this.loadImage = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.discardImage = new System.Windows.Forms.Button();
+            this.insertImage = new System.Windows.Forms.Button();
+            this.cbProductcategory = new System.Windows.Forms.ComboBox();
             usernameLabel = new System.Windows.Forms.Label();
             passwordLabel = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
-            usernameLabel.Font = new System.Drawing.Font("Segoe Script", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            usernameLabel.Location = new System.Drawing.Point(136, 76);
-            usernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            usernameLabel.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            usernameLabel.Location = new System.Drawing.Point(219, 72);
             usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new System.Drawing.Size(209, 37);
+            usernameLabel.Size = new System.Drawing.Size(192, 33);
             usernameLabel.TabIndex = 26;
             usernameLabel.Text = "Názov Produktu";
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Font = new System.Drawing.Font("Segoe Script", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            passwordLabel.Location = new System.Drawing.Point(148, 179);
-            passwordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            passwordLabel.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            passwordLabel.Location = new System.Drawing.Point(232, 158);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new System.Drawing.Size(196, 37);
+            passwordLabel.Size = new System.Drawing.Size(179, 33);
             passwordLabel.TabIndex = 27;
             passwordLabel.Text = "Cena Produktu";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe Script", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(148, 179);
-            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(196, 37);
-            label2.TabIndex = 33;
-            label2.Text = "Cena Produktu";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe Script", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.Location = new System.Drawing.Point(88, 275);
-            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label3.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.Location = new System.Drawing.Point(52, 242);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(230, 37);
+            label3.Size = new System.Drawing.Size(210, 33);
             label3.TabIndex = 34;
             label3.Text = "Nahranie obrázku";
             // 
@@ -96,10 +86,9 @@ namespace GetDataFromDatabase
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(181, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 37);
+            this.label1.Size = new System.Drawing.Size(280, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "Pridanie položky";
             // 
@@ -110,10 +99,10 @@ namespace GetDataFromDatabase
             this.discardProductName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.discardProductName.FlatAppearance.BorderSize = 0;
             this.discardProductName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.discardProductName.Location = new System.Drawing.Point(386, 111);
-            this.discardProductName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.discardProductName.Location = new System.Drawing.Point(514, 96);
+            this.discardProductName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.discardProductName.Name = "discardProductName";
-            this.discardProductName.Size = new System.Drawing.Size(32, 34);
+            this.discardProductName.Size = new System.Drawing.Size(43, 42);
             this.discardProductName.TabIndex = 32;
             this.discardProductName.UseVisualStyleBackColor = false;
             // 
@@ -124,10 +113,10 @@ namespace GetDataFromDatabase
             this.discardPrice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.discardPrice.FlatAppearance.BorderSize = 0;
             this.discardPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.discardPrice.Location = new System.Drawing.Point(386, 213);
-            this.discardPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.discardPrice.Location = new System.Drawing.Point(514, 182);
+            this.discardPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.discardPrice.Name = "discardPrice";
-            this.discardPrice.Size = new System.Drawing.Size(32, 34);
+            this.discardPrice.Size = new System.Drawing.Size(43, 42);
             this.discardPrice.TabIndex = 31;
             this.discardPrice.UseVisualStyleBackColor = false;
             // 
@@ -136,10 +125,10 @@ namespace GetDataFromDatabase
             this.productprice.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.productprice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productprice.Location = new System.Drawing.Point(94, 219);
-            this.productprice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.productprice.Location = new System.Drawing.Point(125, 193);
+            this.productprice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.productprice.Name = "productprice";
-            this.productprice.Size = new System.Drawing.Size(287, 25);
+            this.productprice.Size = new System.Drawing.Size(383, 31);
             this.productprice.TabIndex = 30;
             // 
             // productname
@@ -147,37 +136,24 @@ namespace GetDataFromDatabase
             this.productname.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.productname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productname.Location = new System.Drawing.Point(94, 116);
-            this.productname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.productname.Location = new System.Drawing.Point(125, 107);
+            this.productname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.productname.Name = "productname";
-            this.productname.Size = new System.Drawing.Size(287, 25);
+            this.productname.Size = new System.Drawing.Size(383, 31);
             this.productname.TabIndex = 29;
             // 
             // addNew
             // 
             this.addNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.addNew.Font = new System.Drawing.Font("Segoe Script", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNew.Location = new System.Drawing.Point(371, 315);
-            this.addNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addNew.Location = new System.Drawing.Point(496, 401);
+            this.addNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addNew.Name = "addNew";
-            this.addNew.Size = new System.Drawing.Size(86, 52);
+            this.addNew.Size = new System.Drawing.Size(115, 64);
             this.addNew.TabIndex = 28;
             this.addNew.Text = "Vložit položku";
             this.addNew.UseVisualStyleBackColor = true;
-            // 
-            // loadImage
-            // 
-            this.loadImage.BackColor = System.Drawing.Color.Transparent;
-            this.loadImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("loadImage.BackgroundImage")));
-            this.loadImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.loadImage.FlatAppearance.BorderSize = 0;
-            this.loadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loadImage.Location = new System.Drawing.Point(94, 315);
-            this.loadImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.loadImage.Name = "loadImage";
-            this.loadImage.Size = new System.Drawing.Size(34, 37);
-            this.loadImage.TabIndex = 35;
-            this.loadImage.UseVisualStyleBackColor = false;
+            this.addNew.Click += new System.EventHandler(this.addNew_Click);
             // 
             // back
             // 
@@ -186,23 +162,87 @@ namespace GetDataFromDatabase
             this.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.back.FlatAppearance.BorderSize = 0;
             this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back.Location = new System.Drawing.Point(14, 7);
-            this.back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.back.Location = new System.Drawing.Point(19, 9);
+            this.back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(46, 44);
+            this.back.Size = new System.Drawing.Size(61, 54);
             this.back.TabIndex = 36;
             this.back.UseVisualStyleBackColor = false;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(58, 278);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(174, 158);
+            this.pictureBox.TabIndex = 37;
+            this.pictureBox.TabStop = false;
+            // 
+            // discardImage
+            // 
+            this.discardImage.BackColor = System.Drawing.Color.Transparent;
+            this.discardImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("discardImage.BackgroundImage")));
+            this.discardImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.discardImage.FlatAppearance.BorderSize = 0;
+            this.discardImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.discardImage.Location = new System.Drawing.Point(238, 367);
+            this.discardImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.discardImage.Name = "discardImage";
+            this.discardImage.Size = new System.Drawing.Size(61, 55);
+            this.discardImage.TabIndex = 38;
+            this.discardImage.UseVisualStyleBackColor = false;
+            this.discardImage.Click += new System.EventHandler(this.discardImage_Click);
+            // 
+            // insertImage
+            // 
+            this.insertImage.BackColor = System.Drawing.Color.Transparent;
+            this.insertImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("insertImage.BackgroundImage")));
+            this.insertImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.insertImage.FlatAppearance.BorderSize = 0;
+            this.insertImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insertImage.Font = new System.Drawing.Font("Segoe Script", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insertImage.Location = new System.Drawing.Point(238, 293);
+            this.insertImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.insertImage.Name = "insertImage";
+            this.insertImage.Size = new System.Drawing.Size(61, 57);
+            this.insertImage.TabIndex = 39;
+            this.insertImage.UseVisualStyleBackColor = false;
+            this.insertImage.Click += new System.EventHandler(this.insertImage_Click);
+            // 
+            // cbProductcategory
+            // 
+            this.cbProductcategory.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.cbProductcategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbProductcategory.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProductcategory.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cbProductcategory.FormattingEnabled = true;
+            this.cbProductcategory.Location = new System.Drawing.Point(364, 278);
+            this.cbProductcategory.Name = "cbProductcategory";
+            this.cbProductcategory.Size = new System.Drawing.Size(235, 40);
+            this.cbProductcategory.TabIndex = 40;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(420, 242);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(117, 33);
+            label2.TabIndex = 41;
+            label2.Text = "Kategória";
+            // 
             // AddNewItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Controls.Add(this.back);
-            this.Controls.Add(this.loadImage);
-            this.Controls.Add(label3);
             this.Controls.Add(label2);
+            this.Controls.Add(this.cbProductcategory);
+            this.Controls.Add(this.insertImage);
+            this.Controls.Add(this.discardImage);
+            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.back);
+            this.Controls.Add(label3);
             this.Controls.Add(this.discardProductName);
             this.Controls.Add(this.discardPrice);
             this.Controls.Add(this.productprice);
@@ -211,9 +251,11 @@ namespace GetDataFromDatabase
             this.Controls.Add(usernameLabel);
             this.Controls.Add(passwordLabel);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddNewItem";
-            this.Size = new System.Drawing.Size(484, 395);
+            this.Size = new System.Drawing.Size(645, 486);
+            this.Load += new System.EventHandler(this.AddNewItem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,7 +269,10 @@ namespace GetDataFromDatabase
         private System.Windows.Forms.TextBox productprice;
         private System.Windows.Forms.TextBox productname;
         private System.Windows.Forms.Button addNew;
-        private System.Windows.Forms.Button loadImage;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.Button discardImage;
+        private System.Windows.Forms.Button insertImage;
+        private System.Windows.Forms.ComboBox cbProductcategory;
     }
 }

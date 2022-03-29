@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace GetDataFromDatabase
 {
-    public class Admin
+    public class Category
     {
-        public int Id { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        public int CategoryID { get; set; }
+        public  string CategoryName { get; set; }
     }
 }

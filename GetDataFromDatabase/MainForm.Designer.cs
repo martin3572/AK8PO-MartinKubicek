@@ -38,12 +38,12 @@ namespace GetDataFromDatabase
             this.reservation = new System.Windows.Forms.Button();
             this.minimalizeButton = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.Button();
+            this.menu2 = new GetDataFromDatabase.Menu();
+            this.addNewItem1 = new GetDataFromDatabase.AddNewItem();
             this.loginForm1 = new GetDataFromDatabase.LoginForm();
             this.reservation1 = new GetDataFromDatabase.Reservation();
-            this.menu1 = new GetDataFromDatabase.Menu();
             this.reviews1 = new GetDataFromDatabase.Reviews();
             this.adminForm1 = new GetDataFromDatabase.AdminForm();
-            this.addNewItem1 = new GetDataFromDatabase.AddNewItem();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,10 +165,29 @@ namespace GetDataFromDatabase
             this.close.UseVisualStyleBackColor = false;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
+            // menu2
+            // 
+            this.menu2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.menu2.Location = new System.Drawing.Point(257, 99);
+            this.menu2.Name = "menu2";
+            this.menu2.Size = new System.Drawing.Size(645, 486);
+            this.menu2.TabIndex = 13;
+            this.menu2.Load += new System.EventHandler(this.menu2_Load);
+            // 
+            // addNewItem1
+            // 
+            this.addNewItem1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.addNewItem1.Location = new System.Drawing.Point(257, 99);
+            this.addNewItem1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addNewItem1.Name = "addNewItem1";
+            this.addNewItem1.Size = new System.Drawing.Size(645, 486);
+            this.addNewItem1.TabIndex = 12;
+            this.addNewItem1.Load += new System.EventHandler(this.addNewItem1_Load);
+            // 
             // loginForm1
             // 
             this.loginForm1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.loginForm1.Location = new System.Drawing.Point(257, 99);
+            this.loginForm1.Location = new System.Drawing.Point(257, 101);
             this.loginForm1.LoggedIn = false;
             this.loginForm1.Name = "loginForm1";
             this.loginForm1.Size = new System.Drawing.Size(645, 486);
@@ -184,14 +203,7 @@ namespace GetDataFromDatabase
             this.reservation1.Name = "reservation1";
             this.reservation1.Size = new System.Drawing.Size(645, 486);
             this.reservation1.TabIndex = 6;
-            // 
-            // menu1
-            // 
-            this.menu1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.menu1.Location = new System.Drawing.Point(257, 99);
-            this.menu1.Name = "menu1";
-            this.menu1.Size = new System.Drawing.Size(645, 486);
-            this.menu1.TabIndex = 7;
+            this.reservation1.Load += new System.EventHandler(this.reservation1_Load);
             // 
             // reviews1
             // 
@@ -211,24 +223,16 @@ namespace GetDataFromDatabase
             this.adminForm1.Size = new System.Drawing.Size(645, 486);
             this.adminForm1.TabIndex = 11;
             // 
-            // addNewItem1
-            // 
-            this.addNewItem1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.addNewItem1.Location = new System.Drawing.Point(257, 99);
-            this.addNewItem1.Name = "addNewItem1";
-            this.addNewItem1.Size = new System.Drawing.Size(645, 486);
-            this.addNewItem1.TabIndex = 12;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(936, 618);
+            this.Controls.Add(this.menu2);
             this.Controls.Add(this.addNewItem1);
             this.Controls.Add(this.loginForm1);
             this.Controls.Add(this.reservation1);
-            this.Controls.Add(this.menu1);
             this.Controls.Add(this.reviews1);
             this.Controls.Add(this.adminForm1);
             this.Controls.Add(this.close);
@@ -254,12 +258,12 @@ namespace GetDataFromDatabase
         private System.Windows.Forms.Button reservation;
         private System.Windows.Forms.Button minimalizeButton;
         private Reservation reservation1;
-        private Menu menu1;
         private Reviews reviews1;
         private LoginForm loginForm1;
         private System.Windows.Forms.Button close;
         private AdminForm adminForm1;
         private System.Windows.Forms.Button login;
         private AddNewItem addNewItem1;
+        private Menu menu2;
     }
 }
