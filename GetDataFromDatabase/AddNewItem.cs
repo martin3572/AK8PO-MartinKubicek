@@ -14,23 +14,26 @@ namespace GetDataFromDatabase
 {
     public partial class AddNewItem : UserControl
     {
+        public bool LoggedIn { get; set; }
+
         public AddNewItem()
         {
+            LoggedIn = true;
             InitializeComponent();
-        }
-
-        private void back_Click(object sender, EventArgs e)
-        {
-            AdminForm adminFormClass = new AdminForm();
-            this.Hide();//because usercontrols have not Close() property as forms
-            this.Parent.Controls.Add(adminFormClass);
-            adminFormClass.Location = new Point(190, 80);
         }
 
         private void addNew_Click(object sender, EventArgs e)
         {
             if (pictureBox != null && pictureBox.ImageLocation != null && productname.Text != String.Empty && productprice.Text != String.Empty)
             {
+                try
+                {
+                    //price is not number
+                }
+                catch
+                {
+                    //display header with info
+                }
                 try
                 {
                     SqlConnection cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=AK8PO;Integrated Security=True");
@@ -112,6 +115,22 @@ namespace GetDataFromDatabase
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            LoggedIn = false;
+            Visible = false;
+        }
+
+        private void discardProductName_Click(object sender, EventArgs e)
+        {
+            productname.Clear();
+        }
+
+        private void discardPrice_Click(object sender, EventArgs e)
+        {
+            productprice.Clear();
         }
     }
 }

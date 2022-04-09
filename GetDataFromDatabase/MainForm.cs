@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kubicek_AK8PO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,63 +21,62 @@ namespace GetDataFromDatabase
             reservation1.Hide();
             menu2.Hide();
             loginForm1.Hide();
-            adminForm1.Hide();
-            reviews1.Hide();
+            reviews2.Hide();
             addNewItem1.Hide();
+            addReview1.Hide();
         }
 
         private void order_Click(object sender, EventArgs e)
         {
                 menu2.Show();
+
                 reservation1.Hide();
                 loginForm1.Hide();
-                adminForm1.Hide();
-                reviews1.Hide();
+                reviews2.Hide();
+                addNewItem1.Hide();
+                addReview1.Hide();
         }
 
         private void reservation_Click(object sender, EventArgs e)
         {
                 reservation1.Show();
+
                 menu2.Hide();
                 loginForm1.Hide();
-                adminForm1.Hide();
-                reviews1.Hide();
+                reviews2.Hide();
+                addNewItem1.Hide();
+                addReview1.Hide();
         }
 
         private void login_Click(object sender, EventArgs e)
         {
-            menu2.Hide();
             reservation1.Hide();
-            adminForm1.Hide();
-            reviews1.Hide();
+            menu2.Hide();
+            loginForm1.Hide();
+            reviews2.Hide();
+            addNewItem1.Hide();
+            addReview1.Hide();
 
             userLoggedIn = loginForm1.LoggedIn;
             if (userLoggedIn == true)
             {
-                adminForm1.Show();
-                reservation1.Hide();
-                menu2.Hide();
-                loginForm1.Hide();
-                reviews1.Hide();
+                addNewItem1.Show(); //added now
             }
             else
             {
                 LoginForm loginFormClass = new LoginForm();
                 loginFormClass.Location = new Point(190, 80);
                 this.Controls.Add(loginFormClass);
-                reservation1.Hide();
-                menu2.Hide();
-                adminForm1.Hide();
-                reviews1.Hide();
             }
         }
         private void reviewForm_Click(object sender, EventArgs e)
         {
-                reviews1.Show();
-                reservation1.Hide();
-                loginForm1.Hide();
-                adminForm1.Hide();
-                menu2.Hide();
+            reviews2.Show();
+            reservation1.Hide();
+            loginForm1.Hide();
+            menu2.Hide();
+            addNewItem1.Hide();
+            addReview1.Hide();
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -89,19 +89,14 @@ namespace GetDataFromDatabase
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void addNewItem1_Load(object sender, EventArgs e)
+        private void newReview_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void reservation1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu2_Load(object sender, EventArgs e)
-        {
-
+            addReview1.Show();
+            reservation1.Hide();
+            loginForm1.Hide();
+            menu2.Hide();
+            addNewItem1.Hide();
+            reviews2.Hide();
         }
     }
 }

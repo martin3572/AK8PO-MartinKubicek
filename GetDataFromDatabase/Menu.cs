@@ -189,6 +189,7 @@ namespace GetDataFromDatabase
 
         private void cbProductcategory_SelectedIndexChanged(object sender, EventArgs e)
         {
+            choosedItem = 0;
             if (mealList.Count == 0)
             {
                 GetMenuFromDB();

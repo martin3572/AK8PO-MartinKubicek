@@ -31,10 +31,10 @@ namespace GetDataFromDatabase
             SqlDataReader reader = cmd1.ExecuteReader();
             if (reader.Read())
             {               
-                AdminForm adminFormClass = new AdminForm();
+                AddNewItem addNewItemClass = new AddNewItem();
                 this.Hide();//because usercontrols have not Close() property as forms
-                this.Parent.Controls.Add(adminFormClass);
-                adminFormClass.Location = new Point(190, 80);
+                this.Parent.Controls.Add(addNewItemClass);
+                addNewItemClass.Location = new Point(190, 80);
                 LoggedIn = true;
                 incorectLogin.Visible = false;
             }

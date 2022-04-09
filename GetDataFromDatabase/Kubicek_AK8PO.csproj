@@ -72,13 +72,9 @@
       <DependentUpon>AddNewItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin.cs" />
-    <Compile Include="AdminForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminForm.Designer.cs">
-      <DependentUpon>AdminForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Category.cs" />
+    <Compile Include="ExistingReservations.cs" />
+    <Compile Include="GuestCount.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,17 +102,22 @@
     <Compile Include="Reservation.Designer.cs">
       <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddReview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddReview.Designer.cs">
+      <DependentUpon>AddReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Review.cs" />
     <Compile Include="Reviews.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Reviews.Designer.cs">
       <DependentUpon>Reviews.cs</DependentUpon>
     </Compile>
+    <Compile Include="Table.cs" />
     <EmbeddedResource Include="AddNewItem.resx">
       <DependentUpon>AddNewItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm.resx">
-      <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -139,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddReview.resx">
+      <DependentUpon>AddReview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reviews.resx">
       <DependentUpon>Reviews.cs</DependentUpon>

@@ -32,19 +32,19 @@ namespace GetDataFromDatabase
             System.Windows.Forms.Label usernameLabel;
             System.Windows.Forms.Label passwordLabel;
             System.Windows.Forms.Label label3;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewItem));
             System.Windows.Forms.Label label2;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewItem));
             this.label1 = new System.Windows.Forms.Label();
             this.discardProductName = new System.Windows.Forms.Button();
             this.discardPrice = new System.Windows.Forms.Button();
             this.productprice = new System.Windows.Forms.TextBox();
             this.productname = new System.Windows.Forms.TextBox();
             this.addNew = new System.Windows.Forms.Button();
-            this.back = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.discardImage = new System.Windows.Forms.Button();
             this.insertImage = new System.Windows.Forms.Button();
             this.cbProductcategory = new System.Windows.Forms.ComboBox();
+            this.logout = new System.Windows.Forms.Button();
             usernameLabel = new System.Windows.Forms.Label();
             passwordLabel = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -82,6 +82,16 @@ namespace GetDataFromDatabase
             label3.TabIndex = 34;
             label3.Text = "Nahranie obrázku";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(420, 242);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(117, 33);
+            label2.TabIndex = 41;
+            label2.Text = "Kategória";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -105,6 +115,7 @@ namespace GetDataFromDatabase
             this.discardProductName.Size = new System.Drawing.Size(43, 42);
             this.discardProductName.TabIndex = 32;
             this.discardProductName.UseVisualStyleBackColor = false;
+            this.discardProductName.Click += new System.EventHandler(this.discardProductName_Click);
             // 
             // discardPrice
             // 
@@ -119,6 +130,7 @@ namespace GetDataFromDatabase
             this.discardPrice.Size = new System.Drawing.Size(43, 42);
             this.discardPrice.TabIndex = 31;
             this.discardPrice.UseVisualStyleBackColor = false;
+            this.discardPrice.Click += new System.EventHandler(this.discardPrice_Click);
             // 
             // productprice
             // 
@@ -155,23 +167,9 @@ namespace GetDataFromDatabase
             this.addNew.UseVisualStyleBackColor = true;
             this.addNew.Click += new System.EventHandler(this.addNew_Click);
             // 
-            // back
-            // 
-            this.back.BackColor = System.Drawing.Color.Transparent;
-            this.back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("back.BackgroundImage")));
-            this.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.back.FlatAppearance.BorderSize = 0;
-            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back.Location = new System.Drawing.Point(19, 9);
-            this.back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(61, 54);
-            this.back.TabIndex = 36;
-            this.back.UseVisualStyleBackColor = false;
-            this.back.Click += new System.EventHandler(this.back_Click);
-            // 
             // pictureBox
             // 
+            this.pictureBox.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox.Location = new System.Drawing.Point(58, 278);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(174, 158);
@@ -221,27 +219,33 @@ namespace GetDataFromDatabase
             this.cbProductcategory.Size = new System.Drawing.Size(235, 40);
             this.cbProductcategory.TabIndex = 40;
             // 
-            // label2
+            // logout
             // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(420, 242);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(117, 33);
-            label2.TabIndex = 41;
-            label2.Text = "Kategória";
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout.BackgroundImage")));
+            this.logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logout.FlatAppearance.BorderSize = 0;
+            this.logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout.Font = new System.Drawing.Font("Segoe Script", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.logout.Location = new System.Drawing.Point(566, 11);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(45, 46);
+            this.logout.TabIndex = 42;
+            this.logout.UseVisualStyleBackColor = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // AddNewItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Controls.Add(this.logout);
             this.Controls.Add(label2);
             this.Controls.Add(this.cbProductcategory);
             this.Controls.Add(this.insertImage);
             this.Controls.Add(this.discardImage);
             this.Controls.Add(this.pictureBox);
-            this.Controls.Add(this.back);
             this.Controls.Add(label3);
             this.Controls.Add(this.discardProductName);
             this.Controls.Add(this.discardPrice);
@@ -269,10 +273,10 @@ namespace GetDataFromDatabase
         private System.Windows.Forms.TextBox productprice;
         private System.Windows.Forms.TextBox productname;
         private System.Windows.Forms.Button addNew;
-        private System.Windows.Forms.Button back;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button discardImage;
         private System.Windows.Forms.Button insertImage;
         private System.Windows.Forms.ComboBox cbProductcategory;
+        private System.Windows.Forms.Button logout;
     }
 }

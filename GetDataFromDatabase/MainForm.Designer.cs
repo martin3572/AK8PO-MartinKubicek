@@ -33,17 +33,18 @@ namespace GetDataFromDatabase
             this.order = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.newReview = new System.Windows.Forms.Button();
             this.login = new System.Windows.Forms.Button();
             this.reviewForm = new System.Windows.Forms.Button();
             this.reservation = new System.Windows.Forms.Button();
             this.minimalizeButton = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.Button();
+            this.reviews2 = new GetDataFromDatabase.Reviews();
             this.menu2 = new GetDataFromDatabase.Menu();
             this.addNewItem1 = new GetDataFromDatabase.AddNewItem();
             this.loginForm1 = new GetDataFromDatabase.LoginForm();
             this.reservation1 = new GetDataFromDatabase.Reservation();
-            this.reviews1 = new GetDataFromDatabase.Reviews();
-            this.adminForm1 = new GetDataFromDatabase.AdminForm();
+            this.addReview1 = new GetDataFromDatabase.AddReview();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,12 +55,12 @@ namespace GetDataFromDatabase
             this.order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.order.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.order.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.order.Location = new System.Drawing.Point(22, 34);
+            this.order.Location = new System.Drawing.Point(22, 24);
             this.order.Margin = new System.Windows.Forms.Padding(0);
             this.order.Name = "order";
-            this.order.Size = new System.Drawing.Size(177, 65);
+            this.order.Size = new System.Drawing.Size(197, 65);
             this.order.TabIndex = 0;
-            this.order.Text = "Objednávky";
+            this.order.Text = "Denné Menu";
             this.order.UseVisualStyleBackColor = false;
             this.order.Click += new System.EventHandler(this.order_Click);
             // 
@@ -78,14 +79,31 @@ namespace GetDataFromDatabase
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.newReview);
             this.panel1.Controls.Add(this.login);
             this.panel1.Controls.Add(this.reviewForm);
             this.panel1.Controls.Add(this.reservation);
             this.panel1.Controls.Add(this.order);
-            this.panel1.Location = new System.Drawing.Point(12, 99);
+            this.panel1.Location = new System.Drawing.Point(22, 99);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 488);
+            this.panel1.Size = new System.Drawing.Size(239, 488);
             this.panel1.TabIndex = 2;
+            // 
+            // newReview
+            // 
+            this.newReview.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.newReview.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.newReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newReview.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newReview.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.newReview.Location = new System.Drawing.Point(22, 300);
+            this.newReview.Margin = new System.Windows.Forms.Padding(0);
+            this.newReview.Name = "newReview";
+            this.newReview.Size = new System.Drawing.Size(197, 65);
+            this.newReview.TabIndex = 5;
+            this.newReview.Text = "Nová Recenzia";
+            this.newReview.UseVisualStyleBackColor = false;
+            this.newReview.Click += new System.EventHandler(this.newReview_Click);
             // 
             // login
             // 
@@ -94,10 +112,10 @@ namespace GetDataFromDatabase
             this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.login.Location = new System.Drawing.Point(22, 401);
+            this.login.Location = new System.Drawing.Point(22, 392);
             this.login.Margin = new System.Windows.Forms.Padding(0);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(177, 65);
+            this.login.Size = new System.Drawing.Size(197, 65);
             this.login.TabIndex = 4;
             this.login.Text = "Obsluha";
             this.login.UseVisualStyleBackColor = false;
@@ -110,12 +128,12 @@ namespace GetDataFromDatabase
             this.reviewForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reviewForm.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reviewForm.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.reviewForm.Location = new System.Drawing.Point(22, 229);
+            this.reviewForm.Location = new System.Drawing.Point(22, 207);
             this.reviewForm.Margin = new System.Windows.Forms.Padding(0);
             this.reviewForm.Name = "reviewForm";
-            this.reviewForm.Size = new System.Drawing.Size(177, 65);
+            this.reviewForm.Size = new System.Drawing.Size(197, 65);
             this.reviewForm.TabIndex = 3;
-            this.reviewForm.Text = "Hodnotenie";
+            this.reviewForm.Text = "Recenzie";
             this.reviewForm.UseVisualStyleBackColor = false;
             this.reviewForm.Click += new System.EventHandler(this.reviewForm_Click);
             // 
@@ -126,10 +144,10 @@ namespace GetDataFromDatabase
             this.reservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reservation.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reservation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.reservation.Location = new System.Drawing.Point(22, 132);
+            this.reservation.Location = new System.Drawing.Point(22, 115);
             this.reservation.Margin = new System.Windows.Forms.Padding(0);
             this.reservation.Name = "reservation";
-            this.reservation.Size = new System.Drawing.Size(177, 65);
+            this.reservation.Size = new System.Drawing.Size(197, 65);
             this.reservation.TabIndex = 1;
             this.reservation.Text = "Rezervácie";
             this.reservation.UseVisualStyleBackColor = false;
@@ -165,29 +183,37 @@ namespace GetDataFromDatabase
             this.close.UseVisualStyleBackColor = false;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
+            // reviews2
+            // 
+            this.reviews2.Adding = false;
+            this.reviews2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.reviews2.Location = new System.Drawing.Point(267, 99);
+            this.reviews2.Name = "reviews2";
+            this.reviews2.Size = new System.Drawing.Size(645, 486);
+            this.reviews2.TabIndex = 15;
+            // 
             // menu2
             // 
             this.menu2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.menu2.Location = new System.Drawing.Point(257, 99);
+            this.menu2.Location = new System.Drawing.Point(267, 99);
             this.menu2.Name = "menu2";
             this.menu2.Size = new System.Drawing.Size(645, 486);
             this.menu2.TabIndex = 13;
-            this.menu2.Load += new System.EventHandler(this.menu2_Load);
             // 
             // addNewItem1
             // 
             this.addNewItem1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.addNewItem1.Location = new System.Drawing.Point(257, 99);
+            this.addNewItem1.Location = new System.Drawing.Point(267, 99);
+            this.addNewItem1.LoggedIn = true;
             this.addNewItem1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addNewItem1.Name = "addNewItem1";
             this.addNewItem1.Size = new System.Drawing.Size(645, 486);
             this.addNewItem1.TabIndex = 12;
-            this.addNewItem1.Load += new System.EventHandler(this.addNewItem1_Load);
             // 
             // loginForm1
             // 
             this.loginForm1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.loginForm1.Location = new System.Drawing.Point(257, 101);
+            this.loginForm1.Location = new System.Drawing.Point(267, 101);
             this.loginForm1.LoggedIn = false;
             this.loginForm1.Name = "loginForm1";
             this.loginForm1.Size = new System.Drawing.Size(645, 486);
@@ -195,33 +221,22 @@ namespace GetDataFromDatabase
             // 
             // reservation1
             // 
-            this.reservation1.BackColor = System.Drawing.Color.Transparent;
-            this.reservation1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reservation1.BackgroundImage")));
+            this.reservation1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.reservation1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.reservation1.CausesValidation = false;
-            this.reservation1.Location = new System.Drawing.Point(257, 99);
+            this.reservation1.Location = new System.Drawing.Point(267, 99);
             this.reservation1.Name = "reservation1";
             this.reservation1.Size = new System.Drawing.Size(645, 486);
-            this.reservation1.TabIndex = 6;
-            this.reservation1.Load += new System.EventHandler(this.reservation1_Load);
+            this.reservation1.TabIndex = 16;
             // 
-            // reviews1
+            // addReview1
             // 
-            this.reviews1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.reviews1.Location = new System.Drawing.Point(257, 99);
-            this.reviews1.Name = "reviews1";
-            this.reviews1.Size = new System.Drawing.Size(645, 486);
-            this.reviews1.TabIndex = 8;
-            // 
-            // adminForm1
-            // 
-            this.adminForm1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.adminForm1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.adminForm1.Location = new System.Drawing.Point(257, 99);
-            this.adminForm1.LoggedIn = true;
-            this.adminForm1.Name = "adminForm1";
-            this.adminForm1.Size = new System.Drawing.Size(645, 486);
-            this.adminForm1.TabIndex = 11;
+            this.addReview1.Adding = false;
+            this.addReview1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.addReview1.Location = new System.Drawing.Point(267, 99);
+            this.addReview1.Name = "addReview1";
+            this.addReview1.Size = new System.Drawing.Size(645, 486);
+            this.addReview1.TabIndex = 17;
             // 
             // MainForm
             // 
@@ -229,16 +244,16 @@ namespace GetDataFromDatabase
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(936, 618);
-            this.Controls.Add(this.menu2);
-            this.Controls.Add(this.addNewItem1);
-            this.Controls.Add(this.loginForm1);
-            this.Controls.Add(this.reservation1);
-            this.Controls.Add(this.reviews1);
-            this.Controls.Add(this.adminForm1);
             this.Controls.Add(this.close);
             this.Controls.Add(this.minimalizeButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.reviews2);
+            this.Controls.Add(this.menu2);
+            this.Controls.Add(this.addNewItem1);
+            this.Controls.Add(this.loginForm1);
+            this.Controls.Add(this.reservation1);
+            this.Controls.Add(this.addReview1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
@@ -257,13 +272,14 @@ namespace GetDataFromDatabase
         private System.Windows.Forms.Button reviewForm;
         private System.Windows.Forms.Button reservation;
         private System.Windows.Forms.Button minimalizeButton;
-        private Reservation reservation1;
-        private Reviews reviews1;
         private LoginForm loginForm1;
         private System.Windows.Forms.Button close;
-        private AdminForm adminForm1;
         private System.Windows.Forms.Button login;
         private AddNewItem addNewItem1;
         private Menu menu2;
+        private GetDataFromDatabase.Reviews reviews2;
+        private Reservation reservation1;
+        private AddReview addReview1;
+        private System.Windows.Forms.Button newReview;
     }
 }
